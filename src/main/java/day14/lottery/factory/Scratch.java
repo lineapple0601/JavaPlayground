@@ -18,8 +18,8 @@ class Scratch implements IScratch {
 
 	Scratch(Random rng) {
 		sheet = new int[3][3];
-		for( int row = 0; row < 3; row++) {
-			for(int col = 0; col < 3; col++) {
+		for (int row = 0; row < 3; row++) {
+			for (int col = 0; col < 3; col++) {
 				sheet[row][col] = rng.nextInt(9) + 1;
 			}
 		}
@@ -35,7 +35,7 @@ class Scratch implements IScratch {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		for (int[] rowItem : sheet) {
-			for( int digit: rowItem) {
+			for (int digit: rowItem) {
 				sb.append(digit);
 			}
 			sb.append('\n');

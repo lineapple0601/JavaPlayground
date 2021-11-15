@@ -36,7 +36,7 @@ public class LotteryFactory {
 	 * @return
 	 */
 	public IScratch draw() {
-		return new Scratch(rng);
+		return new Scratch(rng); // MockRandom
 	}
 
 }

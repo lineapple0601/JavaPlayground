@@ -13,7 +13,6 @@ public class StringConverter {
      * @return @{code: "[a-z0-9_-]*"}のみを含む文字列
      */
     public String sanitizeName(String name) {
-        // TODO
-        return name;
+    	return name.replace(' ', '-').toLowerCase().replaceAll("[^a-z0-9_-]", "_");
     }
 }

@@ -10,7 +10,7 @@ public class WinCalculator {
 	 * 373
 	 * 371
 	 * 371
-	 * の場合は300* 700 = 2100円あたります。
+	 * の場合は30 * 70 = 2100円あたります。
 	 *
 	 * 課題：
 	 * 仕様を満たしている事を確認するテストを描きましょう。
@@ -31,17 +31,17 @@ public class WinCalculator {
 			}
 		}
 		// 列ビンゴ
-		for( int col = 0; col < 2; col++) {
+		for( int col = 0; col < 3; col++) {
 			int value = scratch.getValue(0, col);
-			if( value == scratch.getValue(1, col) && value == scratch.getValue(col, 2)) {
-				score *= value * 100;
+			if( value == scratch.getValue(1, col) && value == scratch.getValue(2, col)) {
+				score *= value * 10;
 			}
 		}
 		// 斜めビンゴ
 		{
 			int value = scratch.getValue(0, 0);
 			if( value == scratch.getValue(1, 1) && value == scratch.getValue(2, 2)) {
-				score = value * 10;
+				score *= value * 10;
 			}
 		}
 		{
